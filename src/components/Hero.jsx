@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
+import Expertise from "./Expertise";
 import homeBg from "../images/homeBg.gif";
+import dolly from "../images/logos/dolly.webp";
+import chatGpt from "../images/logos/chatgpt.webp";
+import anthropic from "../images/logos/anthropic.webp";
+import bert from "../images/logos/bert.webp";
+import mistral from "../images/logos/mistral.webp";
+import lamama from "../images/logos/llama.webp";
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -20,7 +27,7 @@ const Hero = () => {
 
   return (
     <div>
-      {/* Hero Section */}
+      {/* ------------- Main Section ------------------------ */}
       <section
         className="relative h-screen bg-cover bg-center"
         style={{
@@ -89,188 +96,39 @@ const Hero = () => {
         </div>
       </section>
 
-      {/* Our Expertise Section */}
-      <section className="py-16 bg-[#fde9e7]">
+      {/* ---------------------- Our Expertise Section ------------------------- */}
+      <section className="py-8 bg-[#FDE1E0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Title */}
-          <h2 className="text-center text-4xl font-bold mb-10">
+          <h2 className="text-center text-[60px] font-medium mb-10 font-poppins">
             Our Expertise
           </h2>
 
-          {/* Content Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            {/* Column for Text and Divider */}
-            <div className="flex flex-col items-start space-y-8">
-              {/* Large Language Models */}
-              <div>
-                <h3 className="text-xl font-semibold mb-4">
-                  Large Language Models
-                </h3>
-                <div className="border-l-2 border-black pl-4 space-y-2">
-                  <p className="text-gray-700 flex items-center">
-                    <img
-                      src="/path/to/openai-logo.png"
-                      alt="OpenAI"
-                      className="h-8 w-auto mr-4"
-                    />
-                    OpenAI
-                  </p>
-                  <p className="text-gray-700 flex items-center">
-                    <img
-                      src="/path/to/dolly-logo.png"
-                      alt="Dolly"
-                      className="h-8 w-auto mr-4"
-                    />
-                    Dolly
-                  </p>
-                  <p className="text-gray-700 flex items-center">
-                    <img
-                      src="/path/to/anthropic-logo.png"
-                      alt="Anthropic"
-                      className="h-8 w-auto mr-4"
-                    />
-                    Anthropic
-                  </p>
-                  <p className="text-gray-700 flex items-center">
-                    <img
-                      src="/path/to/google-bert-logo.png"
-                      alt="BERT"
-                      className="h-8 w-auto mr-4"
-                    />
-                    BERT
-                  </p>
-                  <p className="text-gray-700 flex items-center">
-                    <img
-                      src="/path/to/mistral-logo.png"
-                      alt="Mistral AI"
-                      className="h-8 w-auto mr-4"
-                    />
-                    Mistral AI
-                  </p>
-                  <p className="text-gray-700 flex items-center">
-                    <img
-                      src="/path/to/llama2-logo.png"
-                      alt="Llama 2"
-                      className="h-8 w-auto mr-4"
-                    />
-                    Llama 2
-                  </p>
-                </div>
-              </div>
+          <div>
+            {/* Passing some dummy data to Expertise component as an example */}
+            <Expertise
+              title="Large Language Models"
+              logos={[
+                { id: 1, url: chatGpt, alt: "Anthropic" },
+                { id: 2, url: dolly, alt: "Logo 2" },
+                { id: 3, url: anthropic, alt: "Logo 3" },
+                { id: 4, url: bert, alt: "Logo 4" },
+                { id: 5, url: mistral, alt: "Logo 5" },
+                { id: 5, url: lamama, alt: "Logo " },
+              ]}
+            />
 
-              {/* Cloud & Model Hub */}
-              <div>
-                <h3 className="text-xl font-semibold mb-4">
-                  Cloud & Model Hub
-                </h3>
-                <div className="border-l-2 border-black pl-4 space-y-2">
-                  <p className="text-gray-700 flex items-center">
-                    <img
-                      src="/path/to/azure-logo.png"
-                      alt="Azure"
-                      className="h-8 w-auto mr-4"
-                    />
-                    Azure
-                  </p>
-                  <p className="text-gray-700 flex items-center">
-                    <img
-                      src="/path/to/openai-logo.png"
-                      alt="OpenAI"
-                      className="h-8 w-auto mr-4"
-                    />
-                    OpenAI
-                  </p>
-                  <p className="text-gray-700 flex items-center">
-                    <img
-                      src="/path/to/transformers-logo.png"
-                      alt="Transformers"
-                      className="h-8 w-auto mr-4"
-                    />
-                    Transformers
-                  </p>
-                  <p className="text-gray-700 flex items-center">
-                    <img
-                      src="/path/to/vertexai-logo.png"
-                      alt="Vertex AI"
-                      className="h-8 w-auto mr-4"
-                    />
-                    Vertex AI
-                  </p>
-                  <p className="text-gray-700 flex items-center">
-                    <img
-                      src="/path/to/sagemaker-logo.png"
-                      alt="Amazon SageMaker"
-                      className="h-8 w-auto mr-4"
-                    />
-                    Amazon SageMaker
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Column for Logos */}
-            <div className="flex flex-col space-y-8">
-              <div className="flex space-x-6">
-                <img
-                  src="/path/to/openai-logo.png"
-                  alt="OpenAI"
-                  className="h-12"
-                />
-                <img
-                  src="/path/to/dolly-logo.png"
-                  alt="Dolly"
-                  className="h-12"
-                />
-                <img
-                  src="/path/to/anthropic-logo.png"
-                  alt="Anthropic"
-                  className="h-12"
-                />
-                <img
-                  src="/path/to/google-bert-logo.png"
-                  alt="BERT"
-                  className="h-12"
-                />
-                <img
-                  src="/path/to/mistral-logo.png"
-                  alt="Mistral AI"
-                  className="h-12"
-                />
-                <img
-                  src="/path/to/llama2-logo.png"
-                  alt="Llama 2"
-                  className="h-12"
-                />
-              </div>
-
-              <div className="flex space-x-6">
-                <img
-                  src="/path/to/azure-logo.png"
-                  alt="Azure"
-                  className="h-12"
-                />
-                <img
-                  src="/path/to/openai-logo.png"
-                  alt="OpenAI"
-                  className="h-12"
-                />
-                <img
-                  src="/path/to/transformers-logo.png"
-                  alt="Transformers"
-                  className="h-12"
-                />
-                <img
-                  src="/path/to/vertexai-logo.png"
-                  alt="Vertex AI"
-                  className="h-12"
-                />
-                <img
-                  src="/path/to/sagemaker-logo.png"
-                  alt="Amazon SageMaker"
-                  className="h-12"
-                />
-              </div>
-            </div>
+            <Expertise
+              title="Large Language Models"
+              logos={[
+                { id: 1, url: chatGpt, alt: "Anthropic" },
+                { id: 2, url: dolly, alt: "Logo 2" },
+                { id: 3, url: anthropic, alt: "Logo 3" },
+                { id: 4, url: bert, alt: "Logo 4" },
+                { id: 5, url: mistral, alt: "Logo 5" },
+                { id: 5, url: lamama, alt: "Logo " },
+              ]}
+            />
           </div>
         </div>
       </section>
