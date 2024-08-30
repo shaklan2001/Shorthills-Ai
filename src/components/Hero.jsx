@@ -33,7 +33,8 @@ import nasscom from "../images/card/nasscon.png";
 import nvidia from "../images/card/nvidia.png";
 import microsoft from "../images/card/microsoft.png";
 import PageBg from "../images/connectBg.webp";
-
+import gitHub from "../images/logos/github.png";
+import huggingFace from "../images/logos/huggingface.svg";
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
 
@@ -225,7 +226,7 @@ const Hero = () => {
       </section>
 
       <section
-        className="relative h-[430px] bg-cover bg-center"
+        className="relative h-[480px] bg-cover bg-center "
         style={{
           backgroundImage: `url(${PageBg})`,
           backgroundPosition: "center",
@@ -240,6 +241,40 @@ const Hero = () => {
         <p className="text-white mx-auto text-center text-[18px] font-[200]">
           Keen to know more? Join our Open Source Communities
         </p>
+
+        <div className="flex justify-center mt-20 ">
+          <div className=" flex items-center justify-around bg-white bg-opacity-10 h-[170px] w-[450px] ">
+            <div className="flex items-center h-[140px] w-[140px]">
+              <img src={gitHub} alt="" />
+            </div>
+            <div className="flex-col h-[140px] w-[220px]">
+              <div>
+                <h2 className="text-white text-4xl mb-12 mt-2">Github</h2>
+              </div>
+              <div className="flex items-center justify-center w-[160px] bg-black text-white border-2 border-red-500 p-2 hover:bg-red-500">
+                <a href="https://github.com/ShorthillsAI">Follow Us &nbsp; &gt; </a>
+              </div>
+            </div>
+          </div>
+
+          <div className=" flex items-center justify-around bg-white bg-opacity-10 h-[170px] w-[450px] ml-20">
+            <div className="flex items-center h-[140px] w-[140px]">
+              <img src={huggingFace} alt="" />
+            </div>
+            <div className="flex-col h-[140px] w-[220px]">
+              <div>
+                <h2 className="text-white text-4xl mb-12 mt-2">Hugging face</h2>
+              </div>
+              <div className="flex items-center justify-center w-[160px] bg-black text-white border-2 border-red-500 p-2 hover:bg-red-500">
+                <a href="https://huggingface.co/shorthillsai">Follow Us &nbsp; &gt; </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+
       </section>
     </div>
   );
